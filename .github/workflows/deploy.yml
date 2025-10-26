@@ -31,7 +31,5 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            # Sync the build folder to the target directory on your VPS
-            rsync -avz --delete ${{ github.workspace }}/build/ ${{ secrets.TARGET_DIR }}
-            # Set permissions
+            rsync -avz --delete ./build/ ${{ secrets.TARGET_DIR }}
             sudo chown -R www-data:www-data ${{ secrets.TARGET_DIR }}
