@@ -24,6 +24,18 @@ jobs:
       - name: Build Docusaurus
         run: npm run build
 
+      - name: Prepare VPS directory
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # Create directory if it doesn't exist
+            sudo mkdir -p /var/www/kemet-lang.org
+            # Give your user ownership temporarily for rsync
+            sudo chown -R ${{ secrets.VPS_USERNAME }}:${{ secrets.VPS_USERNAME }} /var/www/kemet-lang.org
+
       - name: Copy files to VPS
         run: |
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key
@@ -33,12 +45,13 @@ jobs:
             ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }}:/var/www/kemet-lang.org/
           rm -f private_key
 
-      - name: Set permissions on VPS
+      - name: Set final permissions
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            # Set ownership to web server user
             sudo chown -R www-data:www-data /var/www/kemet-lang.org
             sudo chmod -R 755 /var/www/kemet-lang.org
