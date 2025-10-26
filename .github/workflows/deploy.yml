@@ -31,5 +31,5 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            rsync -avz --delete ./build/ ${{ secrets.TARGET_DIR }}
+            rsync -avz --delete ${{ secrets.TARGET_DIR }}/build/
             sudo chown -R www-data:www-data ${{ secrets.TARGET_DIR }}
