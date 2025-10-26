@@ -1,0 +1,8 @@
+{
+  "theme.navbar.docs": "الوثائق",
+  "theme.navbar.blog": "المُدونة",
+  "theme.navbar.sponsors": "الرُعاة",
+  "theme.navbar.about": "من أنا ؟",
+  "theme.navbar.github": "مستودع GitHub",
+  "theme.footer.copyright": "حقوق النشر © {year} مشروع Kemet."
+}

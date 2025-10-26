@@ -1,0 +1,26 @@
+{
+  "version.label": {
+    "message": "v0.0.0",
+    "description": "The label for version current"
+  },
+  "sidebar.docsSidebar.category.Rules": {
+    "message": "القواعد (Rules)",
+    "description": "TODO"
+  },
+  "sidebar.docsSidebar.category.Syntax": {
+    "message": "بنـاء الجُمـل (Syntax)",
+    "description": "TODO"
+  },
+  "sidebar.docsSidebar.category.Data Types": {
+    "message": "أنواع البيّـانات (Data Types)",
+    "description": "TODO"
+  },
+  "sidebar.docsSidebar.category.Expressions": {
+    "message": "التعبيـرات (Expressions)",
+    "description": "TODO"
+  },
+  "sidebar.docsSidebar.category.Statements": {
+    "message": "العِـبارات (Statements)",
+    "description": "TODO"
+  }
+}

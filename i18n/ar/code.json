@@ -1,0 +1,98 @@
+{
+  "theme.navbar.docs": {
+    "message": "الوثائق",
+    "description": "Navbar docs label"
+  },
+  "theme.navbar.blog": {
+    "message": "المُدونة",
+    "description": "Navbar blog label"
+  },
+  "theme.navbar.sponsors": {
+    "message": "الرُعاة",
+    "description": "Navbar sponsors label"
+  },
+  "theme.navbar.about": {
+    "message": "من أنا ؟",
+    "description": "Navbar about label"
+  },
+  "homepage.getStarted": {
+    "message": "ابدأ الآن",
+    "description": "Get started button on homepage"
+  },
+  "homepage.how": {
+    "message": "كيـفَ ؟",
+    "description": "How button on homepage"
+  },
+  "homepage.why": {
+    "message": "لِماذا ؟",
+    "description": "Why button on homepage"
+  },
+  "homepage.who": {
+    "message": "مَن ؟",
+    "description": "Who button on homepage"
+  },
+  "homepage.tagline": {
+    "message": "لُغَةُ العَصرِ",
+    "description": "The tagline for the homepage"
+  },
+  "homepage.kemetUnderDevelopment": {
+    "message": "في الوقت الحالي، ما زالت كيميت قيد التطوير، هذا الموقع غير مُكتمل بَـعد.",
+    "description": "Development warning message"
+  },
+  "homepage.developmentDate": {
+    "message": "17 أكتوبر 2025",
+    "description": "Development target date"
+  },
+  "homepage.title": {
+    "message": "كيميت - لُغَةُ العَصر",
+    "description": "The homepage title"
+  },
+  "homepage.description": {
+    "message": "كيميت - لُغَةُ البرمجة العربية الحديثة",
+    "description": "The homepage description"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "الإصدار: {versionLabel}",
+    "description": "Version badge label"
+  },
+  "theme.docs.paginator.next": {
+    "message": "التالي",
+    "description": "The label used to navigate to the next doc"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "السابق",
+    "description": "The label used to navigate to the previous doc"
+  },
+  "theme.docs.sidebar.closeButtonLabel": {
+    "message": "إغلاق الشريط الجانبي",
+    "description": "The ARIA label for close sidebar button"
+  },
+  "theme.docs.sidebar.collapseButtonLabel": {
+    "message": "طي الشريط الجانبي",
+    "description": "The ARIA label for collapse sidebar button"
+  },
+  "theme.docs.sidebar.expandButtonLabel": {
+    "message": "توسيع الشريط الجانبي",
+    "description": "The ARIA label for expand sidebar button"
+  },
+  "theme.common.editThisPage": {
+    "message": "عدل هذه الصفحة",
+    "description": "The link label to edit the current page"
+  },
+  "theme.common.viewSource": {
+    "message": "عرض المصدر",
+    "description": "The link label to view the source of the current page"
+  },
+  "theme.common.lastUpdatedAt": {
+    "message": "آخر تحديث في {date}",
+    "description": "The label used to indicate the last update date of a page"
+  },
+  "theme.SearchBar.label": {
+    "message": "بحث",
+    "description": "The ARIA label for the search button"
+  },
+  "theme.SearchBar.placeholder": {
+    "message": "ابحث في الوثائق...",
+    "description": "The placeholder for the search bar"
+  }
+}

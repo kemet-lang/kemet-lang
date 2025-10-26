@@ -1,0 +1,102 @@
+{
+  "theme.navbar.docs": {
+    "message": "Docs",
+    "description": "Navbar docs label"
+  },
+  "theme.navbar.blog": {
+    "message": "Blog",
+    "description": "Navbar blog label"
+  },
+  "theme.navbar.sponsors": {
+    "message": "Sponsors",
+    "description": "Navbar sponsors label"
+  },
+  "theme.navbar.about": {
+    "message": "About",
+    "description": "Navbar about label"
+  },
+  "homepage.getStarted": {
+    "message": "Get Started",
+    "description": "Get started button on homepage"
+  },
+  "homepage.how": {
+    "message": "How?",
+    "description": "How button on homepage"
+  },
+  "homepage.why": {
+    "message": "Why?",
+    "description": "Why button on homepage"
+  },
+  "homepage.who": {
+    "message": "Who?",
+    "description": "Who button on homepage"
+  },
+  "homepage.tagline": {
+    "message": "Language of the Era",
+    "description": "The tagline for the homepage"
+  },
+  "homepage.kemetUnderDevelopment": {
+    "message": "Currently, Kemet is still under development, this website is not yet complete.",
+    "description": "Development warning message"
+  },
+  "homepage.developmentDate": {
+    "message": "October 17, 2025",
+    "description": "Development target date"
+  },
+  "homepage.title": {
+    "message": "Kemet - Language of the Era",
+    "description": "The homepage title"
+  },
+  "homepage.description": {
+    "message": "Kemet - Modern Programming Language",
+    "description": "The homepage description"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "Version: {versionLabel}",
+    "description": "Version badge label"
+  },
+  "theme.docs.paginator.next": {
+    "message": "Next",
+    "description": "The label used to navigate to the next doc"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "Previous",
+    "description": "The label used to navigate to the previous doc"
+  },
+  "theme.docs.sidebar.closeButtonLabel": {
+    "message": "Close sidebar",
+    "description": "The ARIA label for close sidebar button"
+  },
+  "theme.docs.sidebar.collapseButtonLabel": {
+    "message": "Collapse sidebar",
+    "description": "The ARIA label for collapse sidebar button"
+  },
+  "theme.docs.sidebar.expandButtonLabel": {
+    "message": "Expand sidebar",
+    "description": "The ARIA label for expand sidebar button"
+  },
+  "theme.docs.syntax": {
+    "message": "Syntax",
+    "description": "Syntax section label"
+  },
+  "theme.common.editThisPage": {
+    "message": "Edit this page",
+    "description": "The link label to edit the current page"
+  },
+  "theme.common.viewSource": {
+    "message": "View source",
+    "description": "The link label to view the source of the current page"
+  },
+  "theme.common.lastUpdatedAt": {
+    "message": "Last updated at {date}",
+    "description": "The label used to indicate the last update date of a page"
+  },
+  "theme.SearchBar.label": {
+    "message": "Search",
+    "description": "The ARIA label for the search button"
+  },
+  "theme.SearchBar.placeholder": {
+    "message": "Search documentation...",
+    "description": "The placeholder for the search bar"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "title": {
+    "message": "",
+    "description": "The title in the navbar"
+  },
+  "theme.navbar.docs": {
+    "message": "Docs",
+    "description": "Navbar docs label"
+  },
+  "theme.navbar.blog": {
+    "message": "Blog",
+    "description": "Navbar blog label"
+  },
+  "theme.navbar.sponsors": {
+    "message": "Sponsors",
+    "description": "Navbar sponsors label"
+  },
+  "theme.navbar.about": {
+    "message": "About",
+    "description": "Navbar about label"
+  },
+  "homepage.getStarted": {
+    "message": "Get Started",
+    "description": "Get started button on homepage"
+  },
+  "homepage.how": {
+    "message": "How?",
+    "description": "How button on homepage"
+  },
+  "homepage.why": {
+    "message": "Why?",
+    "description": "Why button on homepage"
+  },
+  "homepage.who": {
+    "message": "Who?",
+    "description": "Who button on homepage"
+  }
+}

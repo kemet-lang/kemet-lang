@@ -1,0 +1,344 @@
+/* ========== القسم الرئيسي ========== */
+.hero {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--ifm-background-color);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ========== Main Header ========== */
+.mainHeader {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+
+
+/* القسم العلوي - مقسم أفقياً */
+.headerTopSection {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 70vh;
+  height: max-content;
+
+  /* gap: 2rem; */
+  justify-content: flex-end;
+}
+
+/* ========== قسم المحتوى النصي والأزرار ========== */
+.contentSection {
+  user-select: none;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  position: relative;
+}
+
+/* حاوية اللوجو */
+.logoContainer {
+  user-select: none;
+  position: relative;
+  z-index: 1;
+  width: 350px;
+  height: 250px;
+}
+
+.contentSection,
+.imageSection {
+  max-height: 500px;
+}
+
+.logo {
+  width: 350px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  margin: -0px 90px;
+}
+
+.logoContainer .logo {
+  width: 350px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  margin: -99px 0px;
+}
+
+/* اللوجو الصغير */
+.logo {
+  width: 80px;
+  height: 80px;
+  /* filter: drop-shadow(0 0 20px rgba(212, 166, 80, 0.3)); */
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  /* filter: drop-shadow(0 0 30px rgba(212, 166, 80, 0.5)); */
+}
+
+/* العنوان */
+.title {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #d4a650;
+  margin: 0;
+  line-height: 1.1;
+}
+
+/* الوصف */
+.description {
+  font-size: 1.5rem;
+  color: var(--ifm-color-emphasis-700);
+  font-style: italic;
+  margin: 0;
+}
+
+/* ========== أزرار التنقل الثانوية ========== */
+.secondNav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  padding: 0 12px;
+}
+
+.btnPrimary,
+.btnSecondary {
+  padding: 0.8rem 1.8rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #d4a650 0%, #c89940 100%);
+  color: #1a1a1a;
+  box-shadow: 0 4px 15px rgba(212, 166, 80, 0.3);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 166, 80, 0.4);
+}
+
+.btnSecondary {
+  background: rgba(212, 166, 80, 0.1);
+  color: var(--ifm-color-emphasis-800);
+  border: 1px solid rgba(212, 166, 80, 0.3);
+}
+
+.btnSecondary:hover {
+  background: var(--ifm-toc-border-color);
+  border-color: rgba(212, 166, 80, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ========== قسم صورة القط ========== */
+.imageSection {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* حاوية صورة القط مع التوهج */
+.catImageContainer {
+  user-select: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float_x2Lw_bX2i 3s ease-in-out infinite;
+  /* margin-top: 140px; */
+  /* margin-left: 55px; */
+  /* margin-right: 150px; */
+  transform: translate(10%, 20%);
+}
+
+/* التوهج الأصفر الدائري خلف القط */
+.catImageContainer::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(40deg, #fff0, #f1bc52);
+  pointer-events: none;
+  z-index: 0;
+  animation: pulse_vKli 4s ease-in-out infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  /* width: 192px; */
+  /* height: 192px; */
+  /* background-image: var(--vp-home-hero-image-background-image); */
+  filter: blur(60px);
+  transform: translate(-50%, -50%);
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* صورة القط */
+.catImage {
+  height: auto;
+  width: 350px;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 10px 40px rgba(212, 166, 80, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.catImage:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 15px 50px rgba(212, 166, 80, 0.4));
+}
+
+/* القسم السفلي */
+.headerBottomSection {
+  width: 100%;
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(212, 166, 80, 0.05);
+  border-top: 1px solid var(--ifm-toc-border-color);
+}
+
+/* ========== Main Body ========== */
+.mainBody {
+  flex: 1;
+  width: 100%;
+  padding: 2rem;
+}
+
+#DesktopLogo {
+  display: block;
+}
+
+#MobileLogo {
+  display: none;
+}
+
+
+@media (min-width: 996px) {
+  .headerTopSection {
+    padding: 4rem 12%;
+  }
+}
+
+/* ========== MOBILE RESPONSIVE ========== */
+@media (max-width: 996px) {
+  .headerTopSection {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+    padding-top: 100px;
+  }
+
+  .catImageContainer {
+    position: absolute !important;
+    width: 250px !important;
+    height: 250px !important;
+    justify-self: anchor-center;
+    margin: 0;
+    padding: 0;
+    width: 0px !important;
+  }
+
+
+  .catImageContainer::before {
+    /* transform: translate(50%, -60%) !important; */
+    width: 250px !important;
+    height: 250px !important;
+    top: 65px !important;
+  }
+
+  /* .catImage {
+          height: 220px !important;
+        bottom: -23px !important;
+        right: 3px !important;
+} */
+
+  .catImage {
+    display: none !important;
+  }
+
+  #DesktopLogo {
+    display: none !important;
+  }
+
+  #MobileLogo {
+    display: block !important;
+  }
+
+  .imageSection {
+    margin: 0 0 !important;
+    padding: 0 !important;
+    /* max-height: 200px; */
+    /* height: 300px; */
+    display: block !important;
+    min-height: 0px !important;
+    max-height: 0px !important;
+    margin-top: 40px !important;
+    align-self: center;
+    width: 100%;
+  }
+
+  .contentSection {
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    align-content: center !important;
+    flex-direction: column !important;
+    margin-top: -63px !important;
+  }
+
+  .logoContainer {
+    margin: auto !important;
+    width: 100% !important;
+    height: 100px !important;
+  }
+
+  .logo {
+    width: 280px !important;
+    min-width: 250px !important;
+    margin: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+  }
+}

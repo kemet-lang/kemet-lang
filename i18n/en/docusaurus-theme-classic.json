@@ -1,0 +1,8 @@
+{
+  "theme.navbar.docs": "Docs",
+  "theme.navbar.blog": "Blog",
+  "theme.navbar.sponsors": "Sponsors",
+  "theme.navbar.about": "About",
+  "theme.navbar.github": "GitHub repository",
+  "theme.footer.copyright": "Copyright © {year} Kemet Project."
+}

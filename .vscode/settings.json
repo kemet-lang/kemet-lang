@@ -1,0 +1,17 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".vscode": true,
+        ".docusaurus": true,
+        "node_modules": true
+    },
+    "hide-files.files": [
+        ".vscode",
+        ".docusaurus",
+        "node_modules"
+    ]
+}
