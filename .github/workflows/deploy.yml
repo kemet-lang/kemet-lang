@@ -1,0 +1,37 @@
+name: Deploy Docusaurus to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.3.0
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Docusaurus
+        run: npm run build
+
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # Sync the build folder to the target directory on your VPS
+            rsync -avz --delete ${{ github.workspace }}/build/ ${{ secrets.TARGET_DIR }}
+            # Set permissions
+            sudo chown -R www-data:www-data ${{ secrets.TARGET_DIR }}
