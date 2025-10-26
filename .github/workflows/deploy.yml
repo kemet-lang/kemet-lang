@@ -24,15 +24,21 @@ jobs:
       - name: Build Docusaurus
         run: npm run build
 
-      - name: Deploy to VPS
+      - name: Copy files to VPS
+        run: |
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key
+          chmod 600 private_key
+          rsync -avz --delete -e "ssh -i private_key -o StrictHostKeyChecking=no" \
+            build/ \
+            ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }}:/var/www/kemet-lang.org/
+          rm -f private_key
+
+      - name: Set permissions on VPS
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "build/*"
-          target: ${{ secrets.TARGET_DIR }}
-          strip_components: 1
           script: |
-            # Set permissions
-            sudo chown -R www-data:www-data ${{ secrets.TARGET_DIR }}
+            sudo chown -R www-data:www-data /var/www/kemet-lang.org
+            sudo chmod -R 755 /var/www/kemet-lang.org
