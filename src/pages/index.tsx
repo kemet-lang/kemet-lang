@@ -1,11 +1,10 @@
 // 📁 src/pages/index.tsx
 import type {ReactNode} from 'react';
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Translate, {translate} from '@docusaurus/Translate';
 import styles from './index.module.css';
+import React from 'react';
 
 function KemetHero() {
   return (
@@ -18,13 +17,13 @@ function KemetHero() {
           <div className={styles.contentSection}>
             <div className={styles.logoContainer}>
               <img
-                src="/img/website-header-logo.png"
+                src={require('@site/static/img/website-header-logo.png').default}
                 alt="Kemet Logo"
                 id="DesktopLogo"
                 className={styles.logo + " DesktopLogo"}
               />
               <img
-                src="/img/website-header-logo-with-cat-2.png"
+                src={require('@site/static/img/website-header-logo-with-cat-2.png').default}
                 alt="Kemet Logo"
                 id="MobileLogo"
                 className={styles.logo + " MobileLogo"}
@@ -62,7 +61,7 @@ function KemetHero() {
           <div className={styles.imageSection}>
             <div className={styles.catImageContainer}>
               <img
-                src="/img/kemet-cat/king.png"
+                src={require('@site/static/img/kemet-cat/king.png').default}
                 alt="Kemet Cat"
                 className={styles.catImage}
               />

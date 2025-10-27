@@ -1,8 +1,13 @@
 /* ========== القسم الرئيسي ========== */
 .hero {
   min-height: calc(100vh - 60px);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: var(--ifm-background-color);
   position: relative;
   overflow: hidden;
@@ -10,34 +15,64 @@
 
 /* ========== Main Header ========== */
 .mainHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
-  flex: 0 0 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
 
 
 /* القسم العلوي - مقسم أفقياً */
 .headerTopSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
   min-height: 70vh;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
 
   /* gap: 2rem; */
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 /* ========== قسم المحتوى النصي والأزرار ========== */
 .contentSection {
-  user-select: none;
-  flex: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 2rem;
   gap: 1.5rem;
   position: relative;
@@ -45,7 +80,10 @@
 
 /* حاوية اللوجو */
 .logoContainer {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: relative;
   z-index: 1;
   width: 350px;
@@ -78,11 +116,17 @@
   width: 80px;
   height: 80px;
   /* filter: drop-shadow(0 0 20px rgba(212, 166, 80, 0.3)); */
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .logo:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
   /* filter: drop-shadow(0 0 30px rgba(212, 166, 80, 0.5)); */
 }
 
@@ -105,9 +149,12 @@
 
 /* ========== أزرار التنقل الثانوية ========== */
 .secondNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 1rem;
   padding: 0 12px;
 }
@@ -119,20 +166,27 @@
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: none;
   outline: none;
 }
 
 .btnPrimary {
+  background: -o-linear-gradient(315deg, #d4a650 0%, #c89940 100%);
   background: linear-gradient(135deg, #d4a650 0%, #c89940 100%);
   color: #1a1a1a;
-  box-shadow: 0 4px 15px rgba(212, 166, 80, 0.3);
+  -webkit-box-shadow: 0 4px 15px rgba(212, 166, 80, 0.3);
+          box-shadow: 0 4px 15px rgba(212, 166, 80, 0.3);
 }
 
 .btnPrimary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(212, 166, 80, 0.4);
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 0 6px 20px rgba(212, 166, 80, 0.4);
+          box-shadow: 0 6px 20px rgba(212, 166, 80, 0.4);
 }
 
 .btnSecondary {
@@ -144,30 +198,52 @@
 .btnSecondary:hover {
   background: var(--ifm-toc-border-color);
   border-color: rgba(212, 166, 80, 0.5);
-  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 /* ========== قسم صورة القط ========== */
 .imageSection {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
 }
 
 /* حاوية صورة القط مع التوهج */
 .catImageContainer {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: float_x2Lw_bX2i 3s ease-in-out infinite;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: float_x2Lw_bX2i 3s ease-in-out infinite;
+          animation: float_x2Lw_bX2i 3s ease-in-out infinite;
   /* margin-top: 140px; */
   /* margin-left: 55px; */
   /* margin-right: 150px; */
-  transform: translate(10%, 20%);
+  -webkit-transform: translate(10%, 20%);
+      -ms-transform: translate(10%, 20%);
+          transform: translate(10%, 20%);
 }
 
 /* التوهج الأصفر الدائري خلف القط */
@@ -176,13 +252,17 @@
   position: absolute;
   top: 50%;
   right: 50%;
-  transform: translate(50%, -50%);
+  -webkit-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
   width: 350px;
   height: 350px;
+  background: -o-linear-gradient(50deg, #fff0, #f1bc52);
   background: linear-gradient(40deg, #fff0, #f1bc52);
   pointer-events: none;
   z-index: 0;
-  animation: pulse_vKli 4s ease-in-out infinite;
+  -webkit-animation: pulse_vKli 4s ease-in-out infinite;
+          animation: pulse_vKli 4s ease-in-out infinite;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -190,20 +270,41 @@
   /* width: 192px; */
   /* height: 192px; */
   /* background-image: var(--vp-home-hero-image-background-image); */
-  filter: blur(60px);
-  transform: translate(-50%, -50%);
+  -webkit-filter: blur(60px);
+          filter: blur(60px);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes pulse {
+
+  0%,
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    -webkit-transform: translate(-50%, -50%) scale(1.1);
+            transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.8;
+  }
 }
 
 @keyframes pulse {
 
   0%,
   100% {
-    transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
     opacity: 1;
   }
 
   50% {
-    transform: translate(-50%, -50%) scale(1.1);
+    -webkit-transform: translate(-50%, -50%) scale(1.1);
+            transform: translate(-50%, -50%) scale(1.1);
     opacity: 0.8;
   }
 }
@@ -214,29 +315,45 @@
   width: 350px;
   position: relative;
   z-index: 1;
-  filter: drop-shadow(0 10px 40px rgba(212, 166, 80, 0.3));
+  -webkit-filter: drop-shadow(0 10px 40px rgba(212, 166, 80, 0.3));
+          filter: drop-shadow(0 10px 40px rgba(212, 166, 80, 0.3));
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .catImage:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 15px 50px rgba(212, 166, 80, 0.4));
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-filter: drop-shadow(0 15px 50px rgba(212, 166, 80, 0.4));
+          filter: drop-shadow(0 15px 50px rgba(212, 166, 80, 0.4));
 }
 
 /* القسم السفلي */
 .headerBottomSection {
   width: 100%;
   min-height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: rgba(212, 166, 80, 0.05);
   border-top: 1px solid var(--ifm-toc-border-color);
 }
 
 /* ========== Main Body ========== */
 .mainBody {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   width: 100%;
   padding: 2rem;
 }
@@ -259,8 +376,13 @@
 /* ========== MOBILE RESPONSIVE ========== */
 @media (max-width: 996px) {
   .headerTopSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     padding: 0;
     padding-top: 100px;
   }
@@ -269,7 +391,8 @@
     position: absolute !important;
     width: 250px !important;
     height: 250px !important;
-    justify-self: anchor-center;
+    -ms-grid-column-align: anchor-center;
+        justify-self: anchor-center;
     margin: 0;
     padding: 0;
     width: 0px !important;
@@ -310,7 +433,9 @@
     min-height: 0px !important;
     max-height: 0px !important;
     margin-top: 40px !important;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     width: 100%;
   }
 
@@ -318,11 +443,21 @@
     margin: 0 !important;
     padding: 0 !important;
     position: relative !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    align-content: center !important;
-    flex-direction: column !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -ms-flex-line-pack: center !important;
+        align-content: center !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
     margin-top: -63px !important;
   }
 
