@@ -7,10 +7,10 @@ const config: Config = {
   tagline         : 'Language of the era',
   favicon         : 'img/favicon.ico',
 
-  url             : 'https://kemet-lang.github.io', // TODO: change it.
+  url             : 'https://kemet-lang.github.io',
   baseUrl         : '/',
 
-  organizationName: 'kemet-project',
+  organizationName: 'kemet-lang',
   projectName     : 'kemet-lang',
 
   onBrokenLinks   : 'warn',
@@ -21,7 +21,7 @@ const config: Config = {
   },
 
   i18n            : {
-    defaultLocale : 'ar',
+    defaultLocale : 'en',
     locales       : ['ar', 'en'],
 
     localeConfigs : {

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://kemet-lang.github.io/ar/blog</id>
+    <title>Kemet Blog</title>
+    <updated>2025-10-17T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://kemet-lang.github.io/ar/blog"/>
+    <subtitle>Kemet Blog</subtitle>
+    <icon>https://kemet-lang.github.io/ar/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Hello World !]]></title>
+        <id>https://kemet-lang.github.io/ar/blog/hello-world-post</id>
+        <link href="https://kemet-lang.github.io/ar/blog/hello-world-post"/>
+        <updated>2025-10-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Hello World !]]></summary>
+        <content type="html"><![CDATA[<p>Hello World !</p>
+<p>.. !</p>]]></content>
+        <author>
+            <name>Maysara Elshewehy</name>
+            <uri>https://github.com/maysara-elshewehy</uri>
+        </author>
+        <category label="Kemet" term="Kemet"/>
+    </entry>
+</feed>
