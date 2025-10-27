@@ -1,57 +1,30 @@
-name: Deploy Docusaurus to VPS
+name: Deploy static site to Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
+  workflow_dispatch:
 
 jobs:
-  web-deploy:
-    name: Deploy
+  deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          node-version: 22.3.0
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build Docusaurus
-        run: npm run build
-
-      - name: Prepare VPS directory
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            # Create directory if it doesn't exist
-            sudo mkdir -p /var/www/kemet-lang.org
-            # Give your user ownership temporarily for rsync
-            sudo chown -R ${{ secrets.VPS_USERNAME }}:${{ secrets.VPS_USERNAME }} /var/www/kemet-lang.org
-
-      - name: Copy files to VPS
-        run: |
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key
-          chmod 600 private_key
-          rsync -avz --delete -e "ssh -i private_key -o StrictHostKeyChecking=no" \
-            build/ \
-            ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }}:/var/www/kemet-lang.org/
-          rm -f private_key
-
-      - name: Set final permissions
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            # Set ownership to web server user
-            sudo chown -R www-data:www-data /var/www/kemet-lang.org
-            sudo chmod -R 755 /var/www/kemet-lang.org
+          # This is the key line to change
+          path: './build'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
