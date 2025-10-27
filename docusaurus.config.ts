@@ -46,7 +46,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/kemet-lang/website/tree/main/',
+          editUrl: 'https://github.com/kemet-lang/kemet-lang/tree/main/',
           includeCurrentVersion: false
         },
 
