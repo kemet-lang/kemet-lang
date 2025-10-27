@@ -179,7 +179,13 @@ nav {
   position: relative;
   padding-left: 32px;
 }
-
+.navbar__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
 .dropdown__link--active::before {
   content: '✓';
   position: absolute;
@@ -499,23 +505,31 @@ nav {
   border-left: 1px solid var(--ifm-toc-border-color);
 }
 
-
+[lang=en] .first_social_icon {
+  margin-left: 25px !important;
+  margin-right: 0px !important;
+}
 /* ========== MOBILE RESPONSIVE ========== */
 @media (max-width: 996px) {
   .navbar__items:not(:has(.navbar__toggle[aria-expanded="true"])) .navbar_link_label {
     display: none !important;
   }
 
+
+/*
   .navbar__items:has(.navbar__toggle[aria-expanded="true"]) .navbar_link_label {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
-  }
+  } */
 
   .navbar__item:has(.navbar__toggle) {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
+    width: 50px;
+    max-width: unset;
+    min-width: 50px !important;
   }
 
   .navbar__toggle {
@@ -524,20 +538,107 @@ nav {
     display: flex !important;
   }
 
+  .theme-layout-navbar-sidebar {
+    position: relative;
+  }
+
   .navbar-sidebar {
+    /* width: 0 !important; */
+    /* max-width: 0 !important; */
+    /* inset: 0; */
+    /* margin: auto; */
+    width: -webkit-fill-available;
+    top: 225px;
+
     background: var(--ifm-navbar-background-color);
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+
+    position: unset;
+    inset: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    transform: unset !important;
+    padding: 0;
+    display: inline-table;
+
+    min-width: unset;
+    margin: auto;
+    max-width: 90vw;
+    z-index: 90;
   }
 
+
+  /*
+  <div class="navbar__item">
+    <button
+      aria-label="Toggle navigation bar" aria-expanded="false"
+      class="navbar__toggle" type="button">
+        <span class="hamburger">
+          <span class="hamburger__top"></span>
+          <span class="hamburger__middle"></span>
+          <span class="hamburger__bottom"></span>
+        </span>
+      </button>
+  </div>
+  */
+
+  .navbar__inner .navbar__items--right .navbar__item:not(:has(.navbar__toggle)) {
+    display: none !important;
+  }
+  .navbar {
+        backdrop-filter: blur(10px);
+    background: #0000;
+    bottom: 100% !important;
+    box-shadow: none;
+    padding: 0 5% !important;
+    position: fixed !important;
+    width: -webkit-fill-available;
+    display: flex
+;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+  }
   .navbar-sidebar__brand {
     background: var(--ifm-navbar-background-color);
     border-bottom: 1px solid var(--ifm-toc-border-color);
+    width: 100%;
+  }
+
+  .navbar-sidebar__brand .navbar__brand {
+    display: none !important;
+  }
+
+  .nav_social_icon {
+    padding: 0.75rem 3rem !important;
+    opacity: 0.5;
   }
 
   .navbar-sidebar__items {
-    padding: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    width: 50vw;
+    padding: 0;
+    width: 200px;
+    position: relative;
+    inset: 0;
+    margin: auto;
+    transform: unset;
   }
 
   .menu__link {

@@ -20,6 +20,10 @@ const config: Config = {
     hooks: { onBrokenMarkdownLinks: 'warn' }
   },
 
+  stylesheets     : [
+    '/css/safari-fixes.css',
+  ],
+
   i18n            : {
     defaultLocale : 'en',
     locales       : ['ar', 'en'],
