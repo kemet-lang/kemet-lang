@@ -153,10 +153,11 @@
   display: -ms-flexbox;
   display: flex;
   gap: 1rem;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   margin-top: 1rem;
   padding: 0 12px;
+  height: fit-content;
 }
 
 .btnPrimary,

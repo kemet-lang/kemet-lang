@@ -613,14 +613,18 @@ nav {
     background: var(--ifm-navbar-background-color);
     border-bottom: 1px solid var(--ifm-toc-border-color);
     width: 100%;
-  }
-
-  .navbar-sidebar__brand .navbar__brand {
     display: none !important;
   }
 
+  .navbar-sidebar__brand .navbar__brand {
+  }
+
+  .theme-layout-navbar-sidebar.navbar-sidebar {
+    margin-top: 18px !important;
+  }
+
   .nav_social_icon {
-    padding: 0.75rem 3rem !important;
+    padding: 0.75rem 1.6rem !important;
     opacity: 0.5;
   }
 
