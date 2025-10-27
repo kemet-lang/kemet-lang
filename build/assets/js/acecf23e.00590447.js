@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkkemet_website=globalThis.webpackChunkkemet_website||[]).push([[903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/kemet-lang/blog","blogTitle":"Blog","authorsListPath":"/kemet-lang/blog/authors"}')}}]);

@@ -8,7 +8,7 @@ const config: Config = {
   favicon         : 'img/favicon.ico',
 
   url             : 'https://kemet-lang.github.io',
-  baseUrl         : '/',
+  baseUrl         : '/kemet-lang/',
 
   organizationName: 'kemet-lang',
   projectName     : 'kemet-lang',

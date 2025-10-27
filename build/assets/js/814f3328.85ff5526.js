@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkkemet_website=globalThis.webpackChunkkemet_website||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Hello World !","permalink":"/kemet-lang/blog/hello-world-post","unlisted":false,"date":"2025-10-17T00:00:00.000Z"}]}')}}]);

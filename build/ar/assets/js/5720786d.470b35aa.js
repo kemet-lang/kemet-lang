@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkkemet_website=globalThis.webpackChunkkemet_website||[]).push([[214],{1652:e=>{e.exports=JSON.parse('{"tags":[{"label":"Kemet","permalink":"/kemet-lang/ar/blog/tags/kemet","description":"Kemet tag description","count":1}]}')}}]);

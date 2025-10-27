@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkkemet_website=globalThis.webpackChunkkemet_website||[]).push([[189],{1450:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/ar/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
