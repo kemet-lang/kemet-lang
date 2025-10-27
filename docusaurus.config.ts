@@ -7,8 +7,8 @@ const config: Config = {
   tagline         : 'Language of the era',
   favicon         : 'img/favicon.ico',
 
-  url             : 'https://kemet-lang.github.io',
-  baseUrl         : '/kemet-lang/',
+  url             : 'https://kemet-lang.org',
+  baseUrl         : '/',
 
   organizationName: 'kemet-lang',
   projectName     : 'kemet-lang',

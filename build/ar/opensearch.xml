@@ -4,8 +4,8 @@
   <ShortName>Kemet</ShortName>
   <Description>Search Kemet</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://kemet-lang.github.io/kemet-lang/ar/img/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://kemet-lang.github.io/kemet-lang/ar/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://kemet-lang.github.io/kemet-lang/ar/opensearch.xml" />
-  <moz:SearchForm>https://kemet-lang.github.io/kemet-lang/ar/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://kemet-lang.org/ar/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://kemet-lang.org/ar/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://kemet-lang.org/ar/opensearch.xml" />
+  <moz:SearchForm>https://kemet-lang.org/ar/</moz:SearchForm>
 </OpenSearchDescription>

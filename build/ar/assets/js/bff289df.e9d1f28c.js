@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkkemet_website=globalThis.webpackChunkkemet_website||[]).push([[348],{9584:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/kemet-lang/ar/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
