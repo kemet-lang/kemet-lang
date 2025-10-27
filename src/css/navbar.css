@@ -566,6 +566,10 @@ nav {
     width: 100%;
   }
 
+  .navbar-sidebar {
+    position: initial !important;
+  }
+
   .navbar-sidebar .navbar__item {
     margin-top: 0;
   }
