@@ -366,4 +366,8 @@ nav .pagination-nav__link:active {
     width: fit-content;
     display: inline-flex;
   }
+
+  #__docusaurus_skipToContent_fallback {
+    padding-top: 65px !important;
+  }
 }
