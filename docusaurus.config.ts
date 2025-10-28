@@ -21,7 +21,6 @@ const config: Config = {
   },
 
   stylesheets     : [
-    '/css/safari-fixes.css',
   ],
 
   i18n            : {

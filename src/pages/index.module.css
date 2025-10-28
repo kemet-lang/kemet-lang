@@ -1,93 +1,41 @@
-/* ========== القسم الرئيسي ========== */
+/* ========== HERO SECTION ========== */
 .hero {
   min-height: calc(100vh - 60px);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background-color: var(--ifm-background-color);
   position: relative;
   overflow: hidden;
 }
 
-/* ========== Main Header ========== */
+/* ========== MAIN HEADER ========== */
 .mainHeader {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
-
-
-/* القسم العلوي - مقسم أفقياً */
 .headerTopSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 100%;
   min-height: 70vh;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-
-  /* gap: 2rem; */
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  height: auto;
+  justify-content: flex-end;
 }
 
-/* ========== قسم المحتوى النصي والأزرار ========== */
+/* ========== CONTENT SECTION ========== */
 .contentSection {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  user-select: none;
+  flex: 1;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   padding: 2rem;
   gap: 1.5rem;
   position: relative;
-}
-
-/* حاوية اللوجو */
-.logoContainer {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  position: relative;
-  z-index: 1;
-  width: 350px;
-  height: 250px;
 }
 
 .contentSection,
@@ -95,42 +43,29 @@
   max-height: 500px;
 }
 
-.logo {
+/* Logo Container */
+.logoContainer {
+  user-select: none;
+  position: relative;
+  z-index: 1;
   width: 350px;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  margin: -0px 90px;
+  height: 250px;
 }
 
-.logoContainer .logo {
+.logo {
   width: 350px;
   height: auto;
   position: absolute;
   top: 50%;
   margin: -99px 0px;
-}
-
-/* اللوجو الصغير */
-.logo {
-  width: 80px;
-  height: 80px;
-  /* filter: drop-shadow(0 0 20px rgba(212, 166, 80, 0.3)); */
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .logo:hover {
-  -webkit-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-          transform: scale(1.05);
-  /* filter: drop-shadow(0 0 30px rgba(212, 166, 80, 0.5)); */
+  transform: scale(1.05);
 }
 
-/* العنوان */
+/* Title & Description */
 .title {
   font-size: 4.5rem;
   font-weight: bold;
@@ -139,7 +74,6 @@
   line-height: 1.1;
 }
 
-/* الوصف */
 .description {
   font-size: 1.5rem;
   color: var(--ifm-color-emphasis-700);
@@ -147,14 +81,11 @@
   margin: 0;
 }
 
-/* ========== أزرار التنقل الثانوية ========== */
+/* ========== BUTTONS ========== */
 .secondNav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 1rem;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-wrap: nowrap;
   margin-top: 1rem;
   padding: 0 12px;
   height: fit-content;
@@ -167,27 +98,20 @@
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: none;
   outline: none;
 }
 
 .btnPrimary {
-  background: -o-linear-gradient(315deg, #d4a650 0%, #c89940 100%);
   background: linear-gradient(135deg, #d4a650 0%, #c89940 100%);
   color: #1a1a1a;
-  -webkit-box-shadow: 0 4px 15px rgba(212, 166, 80, 0.3);
-          box-shadow: 0 4px 15px rgba(212, 166, 80, 0.3);
+  box-shadow: 0 4px 15px rgba(212, 166, 80, 0.3);
 }
 
 .btnPrimary:hover {
-  -webkit-transform: translateY(-2px);
-      -ms-transform: translateY(-2px);
-          transform: translateY(-2px);
-  -webkit-box-shadow: 0 6px 20px rgba(212, 166, 80, 0.4);
-          box-shadow: 0 6px 20px rgba(212, 166, 80, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 166, 80, 0.4);
 }
 
 .btnSecondary {
@@ -199,166 +123,97 @@
 .btnSecondary:hover {
   background: var(--ifm-toc-border-color);
   border-color: rgba(212, 166, 80, 0.5);
-  -webkit-transform: translateY(-2px);
-      -ms-transform: translateY(-2px);
-          transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
-/* ========== قسم صورة القط ========== */
+/* ========== IMAGE SECTION ========== */
 .imageSection {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 1;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
 
-/* حاوية صورة القط مع التوهج */
 .catImageContainer {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-animation: float_x2Lw_bX2i 3s ease-in-out infinite;
-          animation: float_x2Lw_bX2i 3s ease-in-out infinite;
-  /* margin-top: 140px; */
-  /* margin-left: 55px; */
-  /* margin-right: 150px; */
-  -webkit-transform: translate(10%, 20%);
-      -ms-transform: translate(10%, 20%);
-          transform: translate(10%, 20%);
+  align-items: center;
+  justify-content: center;
+  animation: float 3s ease-in-out infinite;
+  transform: translate(10%, 20%);
 }
 
-/* التوهج الأصفر الدائري خلف القط */
+@keyframes float {
+  0%, 100% {
+    transform: translate(10%, 20%) translateY(0);
+  }
+  50% {
+    transform: translate(10%, 20%) translateY(-10px);
+  }
+}
+
+/* Glow effect behind cat */
 .catImageContainer::before {
   content: '';
   position: absolute;
   top: 50%;
-  right: 50%;
-  -webkit-transform: translate(50%, -50%);
-      -ms-transform: translate(50%, -50%);
-          transform: translate(50%, -50%);
+  left: 50%;
   width: 350px;
   height: 350px;
-  background: -o-linear-gradient(50deg, #fff0, #f1bc52);
-  background: linear-gradient(40deg, #fff0, #f1bc52);
+  background: linear-gradient(40deg, transparent, #f1bc52);
+  border-radius: 50%;
+  filter: blur(60px);
+  transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 0;
-  -webkit-animation: pulse_vKli 4s ease-in-out infinite;
-          animation: pulse_vKli 4s ease-in-out infinite;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  /* width: 192px; */
-  /* height: 192px; */
-  /* background-image: var(--vp-home-hero-image-background-image); */
-  -webkit-filter: blur(60px);
-          filter: blur(60px);
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-@-webkit-keyframes pulse {
-
-  0%,
-  100% {
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-
-  50% {
-    -webkit-transform: translate(-50%, -50%) scale(1.1);
-            transform: translate(-50%, -50%) scale(1.1);
-    opacity: 0.8;
-  }
+  animation: pulse 4s ease-in-out infinite;
 }
 
 @keyframes pulse {
-
-  0%,
-  100% {
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
     opacity: 1;
   }
-
   50% {
-    -webkit-transform: translate(-50%, -50%) scale(1.1);
-            transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(1.1);
     opacity: 0.8;
   }
 }
 
-/* صورة القط */
 .catImage {
   height: auto;
   width: 350px;
   position: relative;
   z-index: 1;
-  -webkit-filter: drop-shadow(0 10px 40px rgba(212, 166, 80, 0.3));
-          filter: drop-shadow(0 10px 40px rgba(212, 166, 80, 0.3));
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  -o-transition: transform 0.3s ease;
+  filter: drop-shadow(0 10px 40px rgba(212, 166, 80, 0.3));
   transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .catImage:hover {
-  -webkit-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-filter: drop-shadow(0 15px 50px rgba(212, 166, 80, 0.4));
-          filter: drop-shadow(0 15px 50px rgba(212, 166, 80, 0.4));
+  transform: scale(1.05);
+  filter: drop-shadow(0 15px 50px rgba(212, 166, 80, 0.4));
 }
 
-/* القسم السفلي */
+/* ========== BOTTOM SECTION ========== */
 .headerBottomSection {
   width: 100%;
   min-height: 20vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(212, 166, 80, 0.05);
   border-top: 1px solid var(--ifm-toc-border-color);
 }
 
-/* ========== Main Body ========== */
 .mainBody {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   width: 100%;
   padding: 2rem;
 }
 
+/* ========== LOGO VISIBILITY ========== */
 #DesktopLogo {
   display: block;
 }
@@ -367,7 +222,7 @@
   display: none;
 }
 
-
+/* ========== DESKTOP ========== */
 @media (min-width: 996px) {
   .headerTopSection {
     padding: 4rem 12%;
@@ -377,41 +232,29 @@
 /* ========== MOBILE RESPONSIVE ========== */
 @media (max-width: 996px) {
   .headerTopSection {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
     padding: 0;
-    padding-top: 100px;
+    /* padding-top: 100px; */
   }
 
   .catImageContainer {
     position: absolute !important;
     width: 250px !important;
     height: 250px !important;
-    -ms-grid-column-align: anchor-center;
-        justify-self: anchor-center;
     margin: 0;
     padding: 0;
-    width: 0px !important;
+    left: 50%;
+    transform: translateX(-50%) !important;
   }
-
 
   .catImageContainer::before {
-    /* transform: translate(50%, -60%) !important; */
     width: 250px !important;
     height: 250px !important;
-    top: 65px !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
   }
-
-  /* .catImage {
-          height: 220px !important;
-        bottom: -23px !important;
-        right: 3px !important;
-} */
 
   .catImage {
     display: none !important;
@@ -426,39 +269,26 @@
   }
 
   .imageSection {
-    margin: 0 0 !important;
+    margin: 0 !important;
     padding: 0 !important;
-    /* max-height: 200px; */
-    /* height: 300px; */
     display: block !important;
-    min-height: 0px !important;
-    max-height: 0px !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
     margin-top: 40px !important;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    align-self: center;
     width: 100%;
+    overflow: hidden;
   }
 
   .contentSection {
     margin: 0 !important;
     padding: 0 !important;
     position: relative !important;
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
-    -webkit-box-align: center !important;
-        -ms-flex-align: center !important;
-            align-items: center !important;
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
-    -ms-flex-line-pack: center !important;
-        align-content: center !important;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    align-content: center !important;
+    flex-direction: column !important;
     margin-top: -63px !important;
   }
 
@@ -474,7 +304,15 @@
     margin: auto !important;
     left: 0 !important;
     right: 0 !important;
-    top: 0 !important;
-    bottom: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
   }
 }
