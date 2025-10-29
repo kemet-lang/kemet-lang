@@ -332,6 +332,9 @@ nav .pagination-nav__link:active {
   display: none;
 }
 
+.MobileLogocatImageContainer {
+  display: none;
+}
 /* Safari Fixes */
 @media (min-width: 996px) {
   [aria-label="Docs sidebar"] {
@@ -356,7 +359,22 @@ nav .pagination-nav__link:active {
 
   #MobileLogo {
     display: block !important;
-    margin-top: -140px !important;
+  }
+
+  .MobileLogocatImageContainer {
+    display: block;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(40deg, #fff0, #f1bc52);
+    background: -webkit-linear-gradient(40deg, #fff0, #f1bc52);
+    border-radius: 50%;
+    filter: blur(60px);
+    -webkit-filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+    inset: 0;
+    margin: auto;
   }
 
   .first_social_icon {
@@ -373,6 +391,5 @@ nav .pagination-nav__link:active {
   }
 
   #__docusaurus_skipToContent_fallback {
-    padding-top: 65px !important;
   }
 }

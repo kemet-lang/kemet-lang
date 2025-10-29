@@ -222,8 +222,6 @@
   -webkit-filter: blur(60px);
   pointer-events: none;
   z-index: 0;
-  animation: pulse_vKli 4s ease-in-out infinite;
-  -webkit-animation: pulse_vKli 4s ease-in-out infinite;
 }
 
 @keyframes pulse {
@@ -313,20 +311,7 @@
   }
 
   .catImageContainer {
-    position: absolute !important;
-    width: 250px !important;
-    height: 250px !important;
-    justify-self: anchor-center;
-    margin: 0;
-    padding: 0;
-    width: 0px !important;
-  }
-
-  .catImageContainer::before {
-    /* transform: translate(50%, -60%) !important; */
-    width: 250px !important;
-    height: 250px !important;
-    top: 65px !important;
+    display: none !important;
   }
 
   .imageSection {

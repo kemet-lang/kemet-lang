@@ -22,6 +22,7 @@ function KemetHero() {
                 id="DesktopLogo"
                 className={styles.logo + " DesktopLogo"}
               />
+              <div className={"MobileLogocatImageContainer"}></div>
               <img
                 src={require('@site/static/img/website-header-logo-with-cat-2.png').default}
                 alt="Kemet Logo"
