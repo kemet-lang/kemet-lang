@@ -352,6 +352,7 @@ nav .pagination-nav__link:active {
 
   #MobileLogo {
     display: block !important;
+    margin-top: -140px !important;
   }
 
   .first_social_icon {
