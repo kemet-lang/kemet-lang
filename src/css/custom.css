@@ -346,6 +346,10 @@ nav .pagination-nav__link:active {
     display: none !important;
   }
 
+  .footer {
+    margin-top: 50px !important;
+  }
+
   #DesktopLogo {
     display: none !important;
   }
